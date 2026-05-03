@@ -421,7 +421,7 @@ h1 em {
 
 /* DIFERENCIAL */
 .diferencial {
-  padding: 120px 60px;
+  padding:  60px;
   border-top: 1px solid rgba(123,47,255,0.12);
   background: var(--deep);
 }
@@ -631,6 +631,114 @@ footer p { font-size: 0.78rem; color: var(--text-muted); }
   width: 28px;
   height: 28px;
 }
+ /* TEAM */
+
+.team-title{
+  text-align: center;
+}
+
+
+.team {
+  padding: 100px 40px;
+  background: var(--deep);
+}
+
+.team-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* GRID CORRIGIDO */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 40px;
+  margin-top: 60px;
+}
+
+/* Cada card ocupa 3 colunas */
+.team-member {
+  grid-column: span 3;
+  text-align: center;
+  max-width: 220px;
+  margin: 0 auto;
+}
+
+/* 🔥 Centralização perfeita da segunda linha (3 itens) */
+.team-member:nth-child(5) {
+  grid-column: 3 / span 3;
+}
+
+.team-member:nth-child(6) {
+  grid-column: 6 / span 3;
+}
+
+.team-member:nth-child(7) {
+  grid-column: 9 / span 3;
+}
+
+/* FOTO REDONDA */
+.team-photo {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto 20px;
+  background: linear-gradient(135deg, var(--purple), var(--purple-light));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* imagem dentro */
+.team-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* NOME */
+.team-name {
+  font-family: 'Syne', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+/* CARGO */
+.team-role {
+  font-size: 14px;
+  color: var(--purple-light);
+  margin-bottom: 10px;
+}
+
+/* DESCRIÇÃO */
+.team-description {
+  font-size: 13px;
+  color: #aaa;
+  line-height: 1.5;
+}
+
+/* RESPONSIVO */
+@media (max-width: 1024px) {
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .team-member {
+    grid-column: auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .team-member {
+    grid-column: auto;
+  }
+}
 </style>
 </head>
 <body>
@@ -795,6 +903,59 @@ footer p { font-size: 0.78rem; color: var(--text-muted); }
         <div class="dif-item"><div class="dif-check"></div>Comunicação contínua e transparente</div>
         <div class="dif-item"><div class="dif-check"></div>Foco em impacto real, não em estética vazia</div>
         <div class="dif-item"><div class="dif-check"></div>Criatividade + tecnologia + estratégia juntas</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EQUIPE -->
+<section class="team">
+  <div class="team-inner">
+    <div class="team-header reveal">
+      <h2 class="team-title">Equipe <span style="color: var(--purple);">Cod7Co</span></h2>
+    </div>
+    <div class="team-grid reveal">
+      <div class="team-member">
+        <div class="team-photo">👤</div>
+        <div class="team-name">Alexandre</div>
+        <div class="team-role">Cargo</div>
+        <p class="team-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore.</p>
+      </div>
+      <div class="team-member">
+        <div class="team-photo">👤</div>
+        <div class="team-name">Camila</div>
+        <div class="team-role">Cargo</div>
+        <p class="team-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore.</p>
+      </div>
+      <div class="team-member">
+        <div class="team-photo">👤</div>
+        <div class="team-name">Danilo</div>
+        <div class="team-role">Cargo</div>
+        <p class="team-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore.</p>
+      </div>
+      <div class="team-member">
+        <div class="team-photo">👤</div>
+        <div class="team-name">Douglas</div>
+        <div class="team-role">Cargo</div>
+        <p class="team-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore.</p>
+      </div>
+      <div class="team-member">
+        <div class="team-photo">👤</div>
+        <div class="team-name">Juliana</div>
+        <div class="team-role">Cargo</div>
+        <p class="team-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore.</p>
+      </div>
+      <div class="team-member">
+        <div class="team-photo">👤</div>
+        <div class="team-name">Franciélly</div>
+        <div class="team-role">Cargo</div>
+        <p class="team-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore.</p>
+      </div>
+      <div class="team-member">
+        <div class="team-photo">👤</div>
+        <div class="team-name">Matheus</div>
+        <div class="team-role">Cargo</div>
+        <p class="team-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore.</p>
       </div>
     </div>
   </div>
